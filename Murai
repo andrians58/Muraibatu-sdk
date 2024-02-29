@@ -1,0 +1,5 @@
+import { TatumSDK, Network, Bitcoin } from '@tatumio/tatum'
+
+const tatum = await TatumSDK.init<Bitcoin>({network: Network.BITCOIN})
+
+const result = await tatum.rpc.estimateSmartFee(6)
